@@ -1,6 +1,6 @@
 # Weather App Code Challenge
 
-### By: Rachel Moskowitz
+### By: [Rachel Moskowitz](https://linkedin.com/in/rachm)
 
 <br>
 
