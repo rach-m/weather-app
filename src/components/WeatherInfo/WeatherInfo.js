@@ -30,20 +30,22 @@ export default function WeatherInfo({ zipCode }) {
 
     // Only returns the information when the weather data loads preventing loading errors
     return weather ? (
-        <>
+        <div id='weatherContainer'>
             <div className='cityContainer'>
-                <h1>{weather.name}</h1>
+                <p id='city'>{weather.name}</p>
                 <img
                     src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}.png`}
                     alt='weather icon'></img>
             </div>
-            <h3>{formatTitleCase(weather.weather[0].description)}</h3>
-            <h4>{Math.round(weather.main.temp)}˚</h4>
+            <p id='description'>
+                {formatTitleCase(weather.weather[0].description)}
+            </p>
+            <p id='temp'>{Math.round(weather.main.temp)}˚</p>
             <div className='tempContainer'>
-                <p>{Math.round(weather.main.temp_min)}˚</p>
-                <p>{Math.round(weather.main.temp_max)}˚</p>
+                <p className='minmax'>{Math.round(weather.main.temp_min)}˚</p>
+                <p className='minmax'>{Math.round(weather.main.temp_max)}˚</p>
             </div>
-        </>
+        </div>
     ) : (
         <div>Loading.....</div>
     );
