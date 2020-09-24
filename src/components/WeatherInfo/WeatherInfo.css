@@ -1,8 +1,10 @@
-.App {
+.cityContainer {
     display: flex;
-    flex-direction: column;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    width: 800px;
-    margin: 0 auto;
+}
+
+.tempContainer {
+    display: flex;
 }
